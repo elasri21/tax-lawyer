@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&display=swap');
+:root {
+    /* project Colors */
+    --link-c: #474d75;
+    --dark-blue: #3a50f9;
+    --blue-sky: #38c0e7;
+    /*old colors*/
+    --main-color: #333;
+    --yellow: #ffc800;
+    --orange: #fba61b;
+    --pink: #ee4dc6;
+    --red: #fe4323;
+    --black: #111;
+    --text-c: #555c66;
+    --bg-footer: #333;
+    --light-text: #808080;
+    --main-bg: #e5e5e5;/* icon bg */
+    --shadow: rgb(0 0 0 / 20%);
+    --input-border: #d9d9d9;
+    --link-bg: #b9c1cc;
+}
+/* global rules */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+ul {
+    margin: 0;
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fff;
+}
+@media (min-width: 922px) {
+    .container {
+        margin-left: 100px !important;
+        margin-right: 100px !important;
+    }
+}
+.container {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+/* start header */
+header {
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 111;
+    height: 74px;
+}
+header form input {
+    border: 1px solid white;
+}
+header .search input::placeholder {
+    color: var(--input-border);
+}
+header .search i {
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+}
+@media (max-width: 767px) {
+    header nav {
+        display: none;
+        position: absolute;
+        top: 74px;
+        left: 0;
+        width: 100%;
+        background-color: var(--bg-footer);
+        padding: 30px;
+    }
+    header nav ul {
+        flex-direction: column;
+    }
+    header nav ul li {
+        flex-basis: 100%;
+    }
+    header nav ul li a {
+        color: white !important;
+    }
+    header nav .close {
+        display: block !important;
+        top: 20px;
+        right: 20px;
+    }
+}
+
+header nav ul li a {
+    color: var(--footer-bg);
+}
+header nav ul li a:hover {
+    color: var(--light-text);
+}
+header nav .close {
+    color: white;
+    display: none;
+}
+@media (max-width: 767px) {
+    header .open {
+        display: block !important;
+    }
+}
+header .open {
+    display: none;
+}
+/* end header */
+/* start landing*/
+@media (max-width: 767px) {
+    .landing {
+        height: auto !important;
+    }
+}
+.landing {
+    height: calc(100vh - 74px);
+    background-image: url("../images/landing.jpg");
+}
+.landing .container .info  {
+    max-width: 600px;
+    margin-left: auto;
+}
+.landing .container .arrow i:hover {
+    color: var(--dark-blue);
+}
+/* end landing *
+
+
+/* about-lawyer */
+@media (max-width:767px) {
+    .about-lawyer .image img {
+        max-width: 100%;
+    }
+}
+.about-lawyer .text a:hover {
+    background-color: white;
+}
+/* about-lawyer */
+
+/* services */
+@media (min-width:768px) {
+    .services .title-text > div {
+        width: 40%;
+    }
+    .services .title-text .text p {
+        border-left: 5px solid var(--link-bg);
+    }
+}
+@media (max-width: 500px) {
+    .services .container .boxes .box {
+        flex-direction: column;
+        align-items: center;
+    }
+    .services .container .boxes .box h3,
+    .services .container .boxes .box p {
+        text-align: center;
+    }
+}
+.services .container .boxes {
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+}
+/* services */
+
+/* team-of-lawyer */
+@media (min-width: 768px) {
+    .team-of-lawyer .container > div {
+        width: 45%;
+    }
+}
+.team-of-lawyer .container .info a:hover {
+    background-color: white;
+}
+/* team-of-lawyer */
+
+/* testimonials */
+@media (min-width: 768px) {
+    .testimonials .container .reviews > div {
+        width: calc(50% - 15px);
+    }
+}
+@media (max-width: 500px) {
+    .testimonials .container .reviews .review {
+        flex-direction: column;
+        align-items: center;
+    }
+    .testimonials .container .reviews .review  h3,
+    .testimonials .container .reviews .review  p {
+        text-align: center;
+    }
+}
+/* testimonials */
+/* lawyer */
+.lawyer .container h2 {
+    border-bottom: 3px solid var(--link-bg);
+}
+@media (min-width: 768px) {
+    .lawyer .container .info > div {
+        width: calc(50% - 15px);
+    }
+}
+.lawyer .container .info .text a:hover {
+    background-color: white;
+}
+/* lawyer */
+
+/* contact */
+@media (min-width: 768px) {
+    .contact .container form .field {
+        width: calc(50% - 10px);
+    }
+}
+.contact .container form textarea {
+    height: 150px;
+}
+.contact .container form input:focus::placeholder,
+.contact .container form textarea:focus::placeholder {
+    opacity: 0;
+}
+.contact .container form .submit:hover {
+    background-color: var(--black);
+    color: white;
+}
+/* contact */
+
+/* start footer */
+footer .text {
+    max-width: 500px;
+}
+footer a:hover {
+    color: var(--dark-blue);
+    text-decoration: underline;
+}
+/* end footer */
